@@ -1,0 +1,59 @@
+[
+    {
+        "service": "Scheduling Service",
+        "layer": "edge",
+        "slos": [
+            {
+                "category": "networking",
+                "requirements": [
+                    {
+                        "metric": "latency",
+                        "unit": "milliseconds",
+                        "target": {
+                            "min": 0,
+                            "max": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "category": "hardware",
+                "requirements": [
+                    {
+                        "metric": "memory",
+                        "unit": "gigabytes",
+                        "target": {
+                            "min": 16,
+                            "max": 64
+                        }
+                    }
+                ]
+            }
+        ],
+        "related_services": []
+    },
+    {
+        "service": "Data Aggregation Service",
+        "layer": "any",
+        "slos": [
+            {
+                "category": "networking",
+                "requirements": []
+            },
+            {
+                "category": "hardware",
+                "requirements": [
+                    {
+                        "metric": "memory",
+                        "unit": "gigabytes",
+                        "target": {
+                            "min": 8,
+                            "max": 32
+                        }
+                    }
+                ]
+            }
+        ],
+        "related_services": []
+    }
+]

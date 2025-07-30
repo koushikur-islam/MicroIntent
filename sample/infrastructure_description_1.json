@@ -1,0 +1,367 @@
+{
+  "layers": [
+    {
+      "layer": "cloud",
+      "switches": [
+        {
+          "name": "Cloud Switch 1",
+          "connected-devices": ["Cloud Node 1", "Cloud Node 2", "Cloud Router 1"]
+        },
+        {
+          "name": "Cloud Switch 2",
+          "connected-devices": ["Cloud Node 3", "Cloud Router 2"]
+        }
+      ],
+      "routers": [
+        {
+          "name": "Cloud Router 1",
+          "connected-to": ["Cloud Switch 1", "Fog Router 1"]
+        },
+        {
+          "name": "Cloud Router 2",
+          "connected-to": ["Cloud Switch 2", "Fog Router 2"]
+        }
+      ],
+      "nodes": [
+        {
+          "name": "Cloud Node 1",
+          "cpu-cores": 16,
+          "cpu-unit": "cores",
+          "memory": 32,
+          "memory-unit": "GB",
+          "gpu-cores": 8,
+          "gpu-unit": "cores",
+          "storage": 512,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Cloud Node 2",
+          "cpu-cores": 32,
+          "cpu-unit": "cores",
+          "memory": 64,
+          "memory-unit": "GB",
+          "gpu-cores": 16,
+          "gpu-unit": "cores",
+          "storage": 1024,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Cloud Node 3",
+          "cpu-cores": 64,
+          "cpu-unit": "cores",
+          "memory": 128,
+          "memory-unit": "GB",
+          "gpu-cores": 32,
+          "gpu-unit": "cores",
+          "storage": 2048,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        }
+      ],
+      "connections": [
+        {
+          "from": "Cloud Switch 1",
+          "to": "Cloud Node 1",
+          "bandwidth": 10000,
+          "bandwidth-unit": "Mbps",
+          "latency": 1,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Cloud Switch 1",
+          "to": "Cloud Node 2",
+          "bandwidth": 10000,
+          "bandwidth-unit": "Mbps",
+          "latency": 1,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Cloud Switch 2",
+          "to": "Cloud Node 3",
+          "bandwidth": 10000,
+          "bandwidth-unit": "Mbps",
+          "latency": 1,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Cloud Switch 1",
+          "to": "Cloud Router 1",
+          "bandwidth": 10000,
+          "bandwidth-unit": "Mbps",
+          "latency": 1,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Cloud Switch 2",
+          "to": "Cloud Router 2",
+          "bandwidth": 10000,
+          "bandwidth-unit": "Mbps",
+          "latency": 1,
+          "latency-unit": "ms"
+        }
+      ]
+    },
+    {
+      "layer": "fog",
+      "switches": [
+        {
+          "name": "Fog Switch 1",
+          "connected-devices": ["Fog Node 1", "Fog Node 2", "Fog Router 1"]
+        },
+        {
+          "name": "Fog Switch 2",
+          "connected-devices": ["Fog Node 3", "Fog Router 2"]
+        }
+      ],
+      "routers": [
+        {
+          "name": "Fog Router 1",
+          "connected-to": ["Fog Switch 1", "Cloud Router 1", "Edge Router 1"]
+        },
+        {
+          "name": "Fog Router 2",
+          "connected-to": ["Fog Switch 2", "Cloud Router 2", "Edge Router 2"]
+        }
+      ],
+      "nodes": [
+        {
+          "name": "Fog Node 1",
+          "cpu-cores": 4,
+          "cpu-unit": "cores",
+          "memory": 8,
+          "memory-unit": "GB",
+          "gpu-cores": 2,
+          "gpu-unit": "cores",
+          "storage": 128,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Fog Node 2",
+          "cpu-cores": 8,
+          "cpu-unit": "cores",
+          "memory": 16,
+          "memory-unit": "GB",
+          "gpu-cores": 4,
+          "gpu-unit": "cores",
+          "storage": 256,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Fog Node 3",
+          "cpu-cores": 16,
+          "cpu-unit": "cores",
+          "memory": 32,
+          "memory-unit": "GB",
+          "gpu-cores": 8,
+          "gpu-unit": "cores",
+          "storage": 512,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        }
+      ],
+      "connections": [
+        {
+          "from": "Fog Switch 1",
+          "to": "Fog Node 1",
+          "bandwidth": 2000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Fog Switch 1",
+          "to": "Fog Node 2",
+          "bandwidth": 2000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Fog Switch 2",
+          "to": "Fog Node 3",
+          "bandwidth": 2000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Fog Switch 1",
+          "to": "Fog Router 1",
+          "bandwidth": 2000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Fog Switch 2",
+          "to": "Fog Router 2",
+          "bandwidth": 2000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        }
+      ]
+    },
+    {
+      "layer": "edge",
+      "switches": [
+        {
+          "name": "Edge Switch 1",
+          "connected-devices": ["Edge Node 1", "Edge Node 2", "Edge Router 1"]
+        },
+        {
+          "name": "Edge Switch 2",
+          "connected-devices": ["Edge Node 3", "Edge Node 4", "Edge Router 2"]
+        }
+      ],
+      "routers": [
+        {
+          "name": "Edge Router 1",
+          "connected-to": ["Edge Switch 1", "Fog Router 1"]
+        },
+        {
+          "name": "Edge Router 2",
+          "connected-to": ["Edge Switch 2", "Fog Router 2"]
+        }
+      ],
+      "nodes": [
+        {
+          "name": "Edge Node 1",
+          "cpu-cores": 2,
+          "cpu-unit": "cores",
+          "memory": 4,
+          "memory-unit": "GB",
+          "gpu-cores": 0,
+          "gpu-unit": "cores",
+          "storage": 64,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Edge Node 2",
+          "cpu-cores": 4,
+          "cpu-unit": "cores",
+          "memory": 8,
+          "memory-unit": "GB",
+          "gpu-cores": 2,
+          "gpu-unit": "cores",
+          "storage": 128,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Edge Node 3",
+          "cpu-cores": 8,
+          "cpu-unit": "cores",
+          "memory": 16,
+          "memory-unit": "GB",
+          "gpu-cores": 4,
+          "gpu-unit": "cores",
+          "storage": 256,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        },
+        {
+          "name": "Edge Node 4",
+          "cpu-cores": 2,
+          "cpu-unit": "cores",
+          "memory": 4,
+          "memory-unit": "GB",
+          "gpu-cores": 0,
+          "gpu-unit": "cores",
+          "storage": 32,
+          "storage-unit": "GB",
+          "operating-system": "Linux"
+        }
+      ],
+      "connections": [
+        {
+          "from": "Edge Switch 1",
+          "to": "Edge Node 1",
+          "bandwidth": 1000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Edge Switch 1",
+          "to": "Edge Node 2",
+          "bandwidth": 1000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Edge Switch 2",
+          "to": "Edge Node 3",
+          "bandwidth": 1000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Edge Switch 2",
+          "to": "Edge Node 4",
+          "bandwidth": 1000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Edge Switch 1",
+          "to": "Edge Router 1",
+          "bandwidth": 1000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        },
+        {
+          "from": "Edge Switch 2",
+          "to": "Edge Router 2",
+          "bandwidth": 1000,
+          "bandwidth-unit": "Mbps",
+          "latency": 5,
+          "latency-unit": "ms"
+        }
+      ]
+    }
+  ],
+  "inter-layer-connections": [
+    {
+      "from": "Cloud Router 1",
+      "to": "Fog Router 1",
+      "bandwidth": 500,
+      "bandwidth-unit": "Mbps",
+      "latency": 20,
+      "latency-unit": "ms"
+    },
+    {
+      "from": "Cloud Router 2",
+      "to": "Fog Router 2",
+      "bandwidth": 500,
+      "bandwidth-unit": "Mbps",
+      "latency": 20,
+      "latency-unit": "ms"
+    },
+    {
+      "from": "Fog Router 1",
+      "to": "Edge Router 1",
+      "bandwidth": 200,
+      "bandwidth-unit": "Mbps",
+      "latency": 10,
+      "latency-unit": "ms"
+    },
+    {
+      "from": "Fog Router 2",
+      "to": "Edge Router 2",
+      "bandwidth": 200,
+      "bandwidth-unit": "Mbps",
+      "latency": 10,
+      "latency-unit": "ms"
+    }
+  ]
+}

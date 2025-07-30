@@ -1,0 +1,17 @@
+Scenario-1: Infrastructure Description Fixed and Intents have slight change in the layer.
+
+# Service: Scheduling Service
+# Intent: I need this service to be processed with highest memory and in the edge layer.
+
+# Service: Data Aggregation Service
+# Intent: I need this service to be processed with highest memory.
+
+Scenario-2: Infrastructure Description Changed slightly interms of Single Point Network Property and Intents are kept as Scenario - 1:
+
+# Service: Scheduling Service
+# Intent: I need this service to be processed with highest memory and in the edge layer.
+
+# Service: Data Aggregation Service
+# Intent: I need this service to be processed with highest memory.
+
+Complex: I need Service A to have lowest latency with Service B and Service C and be processed at Cloud layer with highest GPU capacity.
