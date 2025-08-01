@@ -1,7 +1,7 @@
 from openai import OpenAI
 import json
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "YOUR OPENAPI LLM KEY GOES HERE"
 
 def read_local_slos():
     with open('slos.json', 'r') as json_file:
