@@ -133,7 +133,6 @@ def prepare_llm_message(intents, infrastructure_description):
     return message
 
 def extract_slos(intents, infrastructure_description):
-    # return read_local_slos()
     message = prepare_llm_message(intents, infrastructure_description)
     print(message)
     llm_response = get_llm_response(message)
