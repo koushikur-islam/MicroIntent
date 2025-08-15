@@ -48,12 +48,12 @@ A **video tutorial** is available to demonstrate the MVP, including reproducibil
      [http://localhost:3000](http://localhost:3000)
 
 5. **Upload your infrastructure description**  
-   - Use the sample JSON file in the `sample` folder as a template.  
+   - Use the sample JSON file in the `sample` folder named as `infrastructure_description` for `Scenario 1` and `infrastructure_description_1` for `Scenario 2` as a template.  
    - You can modify this file, but ensure the structure remains intact.
 
 6. **Add service-tagged intents**  
    - Click **"Add Intent"** in the UI.  
-   - You can use the sample `intents.txt` file from the `sample` folder.
+   - You can use the sample `intents.txt` file from the `sample` folder for both `Scenario 1` and `Scenario 2`.
 
 7. **Generate placement decisions**  
    - Click **"Generate"** to view the placement strategy output.
