@@ -15,7 +15,7 @@ def save_slos(json_slos):
     except Exception as e:
         print(f"Error saving slos: {str(e)}")
        
-def get_llm_response(message, model_name="gpt-4o-mini"):
+def get_llm_response(message, model_name="gpt-4o"):
     try:
         client = OpenAI(api_key=OPENAI_API_KEY)
         response = client.chat.completions.create(

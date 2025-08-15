@@ -5,26 +5,17 @@
         "slos": [
             {
                 "category": "networking",
-                "requirements": [
-                    {
-                        "metric": "latency",
-                        "unit": "milliseconds",
-                        "target": {
-                            "min": 0,
-                            "max": 0
-                        }
-                    }
-                ]
+                "requirements": []
             },
             {
                 "category": "hardware",
                 "requirements": [
                     {
                         "metric": "memory",
-                        "unit": "gigabytes",
+                        "unit": "GB",
                         "target": {
-                            "min": 16,
-                            "max": 64
+                            "min": 128,
+                            "max": 128
                         }
                     }
                 ]
@@ -45,10 +36,10 @@
                 "requirements": [
                     {
                         "metric": "memory",
-                        "unit": "gigabytes",
+                        "unit": "GB",
                         "target": {
-                            "min": 8,
-                            "max": 32
+                            "min": 512,
+                            "max": 512
                         }
                     }
                 ]

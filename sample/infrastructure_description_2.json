@@ -18,7 +18,8 @@
                 "connected-nodes": [
                     "Node 1",
                     "Node 2",
-                    "Node 3"
+                    "Node 3",
+                    "Node 7"
                 ]
             }
         ],
@@ -64,6 +65,20 @@
                 "network-interface-speed": 10000,
                 "network-interface-unit": "Mbps",
                 "operating-system": "Linux"
+            },
+            {
+                "name": "Node 7",
+                "cpu-cores": 128,
+                "cpu-unit": "cores",
+                "gpu-cores": 16,
+                "gpu-unit": "cores",
+                "memory": 512,
+                "memory-unit": "GB",
+                "storage": 4096,
+                "storage-unit": "GB",
+                "network-interface-speed": 100,
+                "network-interface-unit": "Mbps",
+                "operating-system": "Linux"
             }
         ]
     },
@@ -86,7 +101,8 @@
                 "connected-nodes": [
                     "Node 4",
                     "Node 5",
-                    "Node 6"
+                    "Node 6",
+                    "Node 8"
                 ]
             }
         ],
@@ -126,6 +142,20 @@
                 "gpu-cores": 8,
                 "gpu-unit": "cores",
                 "memory": 64,
+                "memory-unit": "GB",
+                "storage": 256,
+                "storage-unit": "GB",
+                "network-interface-speed": 100,
+                "network-interface-unit": "Mbps",
+                "operating-system": "Linux"
+            },
+            {
+                "name": "Node 8",
+                "cpu-cores": 32,
+                "cpu-unit": "cores",
+                "gpu-cores": 16,
+                "gpu-unit": "cores",
+                "memory": 128,
                 "memory-unit": "GB",
                 "storage": 256,
                 "storage-unit": "GB",
