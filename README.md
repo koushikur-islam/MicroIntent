@@ -2,7 +2,6 @@
 
 **An Intent-Based Placement Strategy Generation Framework for Microservice Applications in the Compute Continuum Using LLMs**
 
-<img width="773" height="440" alt="MicroIntent Screenshot" src="https://github.com/user-attachments/assets/5d6eca72-e628-4ead-a3c3-c11f83a3bc08" />
 
 ---
 
